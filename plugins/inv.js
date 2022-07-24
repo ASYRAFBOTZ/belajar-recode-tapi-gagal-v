@@ -53,15 +53,17 @@ let handler = async (m, { conn, usedPrefix }) => {
 🎒Inventory *${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}*\n
 
 ♥️ Health: *${healt}*
-🗡️ Sword: *${sword == 0 ? 'Tidak Punya' : '' || sword == 1 ? 'Stone Sword' : '' || sword == 2 ? 'Iron Sword' : '' || sword == 3 ? 'Gold Sword' : '' || sword == 4 ? 'Diamond Sword' : '' || sword == 5 ? 'Netherite Sword' : ''}*
-👕 Armor: *${armor == 0 ? 'Tidak Punya' : '' || armor == 1 ? 'Leather Armor' : '' || armor == 2 ? 'Iron Armor' : '' || armor == 3 ? 'Gold Armor' : '' || armor == 4 ? 'Diamond Armor' : '' || armor == 5 ? 'Netherite Armor' : ''}*\n
+⚔️ Sword: *${sword == 0 ? 'Tidak Punya' : '' || sword == 1 ? 'Stone Sword' : '' || sword == 2 ? 'Iron Sword' : '' || sword == 3 ? 'Gold Sword' : '' || sword == 4 ? 'Diamond Sword' : '' || sword == 5 ? 'Netherite Sword' : ''}*
+🥋 Armor: *${armor == 0 ? 'Tidak Punya' : '' || armor == 1 ? 'Leather Armor' : '' || armor == 2 ? 'Iron Armor' : '' || armor == 3 ? 'Gold Armor' : '' || armor == 4 ? 'Diamond Armor' : '' || armor == 5 ? 'Netherite Armor' : ''}*\n
 💵 Money: *${money}*
 📈 Level: *${level}*
-💫 Exp: *${exp}*
-✨Limit: *${limit}*\n
+🌟 Exp: *${exp}*
+🎫 Limit: *${limit}*\n
+
 *Inventory*
+
 💎 Diamond: *${diamond}*
-🧪 Potion: *${potion}*
+💈 Potion: *${potion}*
 🗑️ Sampah: *${sampah}*
 🥫 Makanan Pet: *${makananpet}*
 🎒Total inv: *${diamond + potion + sampah + makananpet}* item\n
@@ -72,7 +74,8 @@ let handler = async (m, { conn, usedPrefix }) => {
 🗳️ Uncommon: *${uncommon}*
 🎁 Mythic: *${mythic}*
 🧰 Legendary: *${legendary}*
-📬 Pet: *${pet}*\n\n
+📬 Pet: *${pet}*
+🔮 Anvered: *${anvered}*\n\n
 
 🧿 Budak: *${budak == 0 ? 'Tidak Punya' : '' || budak == 1 ? 'Level 1' : '' || budak  == 2 ? 'Level 2' : '' || budak == 3 ? 'Level 3' : '' || budak == 4 ? 'Level 4' : '' || budak == 5 ? 'Level MAX' : ''}*
 
