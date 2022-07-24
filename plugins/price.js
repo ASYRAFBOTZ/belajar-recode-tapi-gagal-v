@@ -19,9 +19,9 @@ let premium = `
 └───────
  └✅ Unlimited Limit 
  └✅ Premium User 
- └❎ Add Bot to Group 
-   └  ▹  *Rp. 5.000*
-     └ Expired 3 hari
+ └✅ Add Bot to Group 
+   └  ▹  *Rp. 15.000*
+     └ Permanen
  └ Order | hub : owner
 `
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -33,8 +33,8 @@ let premium = `
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: 'DONASI',
-               url: 'https://saweria.co/ilmanhdyt'
+               displayText: 'KANDANG BOTZ',
+               url: 'https://chat.whatsapp.com/CRrj0z3HgeX39XHNUt0M9V'
              }
 
            },
@@ -57,6 +57,6 @@ let premium = `
 }
 handler.help = ['price']
 handler.tags = ['premium']
-handler.command = /^(price)$/i
+handler.command = /^(price|sewa|buypremium|sewabot)$/i
 
 module.exports = handler
