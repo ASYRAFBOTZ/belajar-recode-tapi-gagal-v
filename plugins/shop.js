@@ -13,6 +13,8 @@ const Bmythic = 2000
 const Smythic = 500
 const Blegendary = 7500 
 const Slegendary = 3000
+const Banvered = 15000000
+const Sanvered = 2000
 const Bsampah = 10
 const Ssampah = 2
 let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
@@ -29,27 +31,32 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
 ${usedPrefix}shop <Buy|sell> <item> <jumlah>\n
 Contoh penggunaan: *${usedPrefix}shop buy potion 1*\n\n
 List Barang:\n\n
-*Barang   |  Harga beli*\n
-Potion:       ${potion}
-Limit:.        ${limit}
-Diamond:     ${Bdiamond}
-Common:     ${Bcommon}
-Uncommon:  ${Buncommon}
-Mythic:     ${Bmythic}
-Legendary: ${Blegendary}
-Sampah:     ${Bsampah}
-Armor:       ${armor}
-Sword:       ${sword}\n\n
-*Barang   | Harga Jual*\n
-Potion:       ${Spotion}
-Limit:          ${Slimit}
-Diamond:     ${Sdiamond}
-Common:     ${Scommon}
-Uncommon:  ${Suncommon}
-Mythic:     ${Smythic}
-Legendary: ${Slegendary}
-Budak:        ${budak}
-Sampah:     ${Ssampah}\n\n
+
+*🛒 Barang   |  Harga beli*\n
+
+💈Potion: ${potion}
+🎫Limit: ${limit}
+💎Diamond: ${Bdiamond}
+📦Common: ${Bcommon}
+🗳️Uncommon: ${Buncommon}
+🎁Mythic: ${Bmythic}
+🧰Legendary: ${Blegendary}
+🔮Anvered: ${Banvered}
+🗑️Sampah: ${Bsampah}
+🥋Armor: ${armor}
+⚔️Sword: ${sword}\n\n
+
+*🛒 Barang   | Harga Jual*\n
+💈Potion:       ${Spotion}
+🎫Limit:          ${Slimit}
+💎Diamond:     ${Sdiamond}
+📦Common:     ${Scommon}
+🗳️Uncommon:  ${Suncommon}
+🎁Mythic:     ${Smythic}
+🧰Legendary: ${Slegendary}
+🔮Anvered: ${Sanvered}
+🧿Budak:        ${budak}
+🗑️Sampah:     ${Ssampah}\n\n
 `.trim()
     try {
         if (/shop|toko/i.test(command)) {
@@ -110,6 +117,13 @@ Sampah:     ${Ssampah}\n\n
                                 global.db.data.users[m.sender].money -= Blegendary * count
                                 conn.reply(m.chat, `Succes membeli ${count} Legendary crate dengan harga ${Blegendary * count} money`, m)
                             } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Legendary crate dengan harga ${Blegendary * count} money\n\nBuka crate dengan ketik: *${usedPrefix}open legendary*`, m)
+
+                        case 'anvered':
+                            if (global.db.data.users[m.sender].money >= Banvered * count) {
+                                global.db.data.users[m.sender].anvered += count * 1
+                                global.db.data.users[m.sender].money -= Banvered * count
+                                conn.reply(m.chat, `Succes membeli ${count} Anvered crate dengan harga ${Banvered * count} money`, m)
+                            } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Anvered crate dengan harga ${Banvered * count} money\n\nBuka crate dengan ketik: *${usedPrefix}open anvered*`, m)
                         
                         break
                     case 'sampah':
@@ -195,6 +209,13 @@ Sampah:     ${Ssampah}\n\n
                             conn.reply(m.chat, `Succes menjual ${count} Legendary Crate dengan harga ${Slegendary * count} money`.trim(), m)
                         } else conn.reply(m.chat, `Legendary Crate kamu tidak cukup`.trim(), m)
                         break
+                    case 'anvered':
+                        if (global.db.data.users[m.sender].anvered >= count * 1) {
+                            global.db.data.users[m.sender].money += Sanvered * count
+                            global.db.data.users[m.sender].anvered -= count * 1
+                            conn.reply(m.chat, `Succes menjual ${count} Anvered Crate dengan harga ${Sanvered * count} money`.trim(), m)
+                        } else conn.reply(m.chat, `Anvered Crate kamu tidak cukup`.trim(), m)
+                        break
                     case 'sampah':
                         if (global.db.data.users[m.sender].sampah >= count * 1) {
                             global.db.data.users[m.sender].sampah -= count * 1
@@ -272,6 +293,14 @@ Sampah:     ${Ssampah}\n\n
                             global.db.data.users[m.sender].money -= Blegendary * count
                             conn.reply(m.chat, `Succes membeli ${count} Legendary crate dengan harga ${Blegendary * count} money`, m)
                         } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Legendary crate dengan harga ${Blegendary * count} money\n\nBuka crate dengan ketik: *${usedPrefix}open legendary*`, m)
+
+                    break
+                case 'legendary':
+                        if (global.db.data.users[m.sender].money >= Banvered * count) {
+                            global.db.data.users[m.sender].anvered += count * 1
+                            global.db.data.users[m.sender].money -= Banvered * count
+                            conn.reply(m.chat, `Succes membeli ${count} Anvered crate dengan harga ${Banvered * count} money`, m)
+                        } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Anvered crate dengan harga ${Banvered * count} money\n\nBuka crate dengan ketik: *${usedPrefix}open anvered*`, m)
                     
                     break
                 case 'sampah':
@@ -359,6 +388,13 @@ Sampah:     ${Ssampah}\n\n
                         global.db.data.users[m.sender].legendary -= count * 1
                         conn.reply(m.chat, `Succes menjual ${count} Legendary Crate dengan harga ${Slegendary * count} money`.trim(), m)
                     } else conn.reply(m.chat, `Legendary Crate kamu tidak cukup`.trim(), m)
+                    break
+                case 'anvered':
+                    if (global.db.data.users[m.sender].anvered >= count * 1) {
+                        global.db.data.users[m.sender].money += Sanvered * count
+                        global.db.data.users[m.sender].anvered -= count * 1
+                        conn.reply(m.chat, `Succes menjual ${count} Anvered Crate dengan harga ${Sanvered * count} money`.trim(), m)
+                    } else conn.reply(m.chat, `Anvered Crate kamu tidak cukup`.trim(), m)
                     break
                 case 'sampah':
                     if (global.db.data.users[m.sender].sampah >= count * 1) {
