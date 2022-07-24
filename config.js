@@ -33,7 +33,7 @@ global.author = 'By Asyraf'
 global.email = 'wekasenpai@gmail.com'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=runner-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
 global.wm = '*YT : MikAzu 929*'
-global.media = ''https://telegra.ph/file/6c740ac2a0f2b15267176.jpg
+global.media = ''https://telegra.ph/file/6c740ac2a0f2b15267176.jpg'
 
 global.wait = '_*tunggu sedang di proses...*_'
 global.eror = '_*Server Error*_'
