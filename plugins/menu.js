@@ -166,36 +166,36 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '💠 Source Code',
-               url: 'https://github.com/ilmanhdyt/ShiraoriBOT-Md'
+               displayText: 'Youtube',
+               url: 'https://bit.ly/3c0WJz9'
              }
 
            },
              {
-             callButton: {
-               displayText: 'Nomor Owner',
-               PhoneNumber: '0813-5104-7727'
+             urlButton: {
+               displayText: 'Instagram',
+               url: 'https://instagram.com/asyrafsixyouu'
+             }
+
+           },
+               {
+             urlButton: {
+               displayText: 'Kandang Botz',
+               url: 'https://chat.whatsapp.com/CRrj0z3HgeX39XHNUt0M9V',
              }
 
            },
                {
              quickReplyButton: {
-               displayText: '🧒 Owner',
-               id: '.owner',
-             }
-
-           },
-               {
-             quickReplyButton: {
-               displayText: '💲 Donasi',
+               displayText: 'Donasi',
                id: '.donasi',
              }
 
            },
            {
              quickReplyButton: {
-               displayText: '📍 Credits',
-               id: '.tqto',
+               displayText: 'Owner Ganz',
+               id: '.owner',
              }
            }]
          }
