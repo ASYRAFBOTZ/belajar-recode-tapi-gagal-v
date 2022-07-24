@@ -10,16 +10,18 @@ let duit = `*────── 「 DONATE 」 ──────*
 Hai 👋
 Kalian bisa mendukung saya agar bot ini tetap up to date dengan:
 ┌〔 Donasi • Emoney 〕
-├🏧 081351047727 (OVO/Dana/GoPay)
-├📍 https://saweria.co/ilmanhdyt
+├🏧 Dana & Pulsa (085646606905)
+├📍 Dana2 & Gopay & Pulsa2 (081946945315)
+├💎 Via Youtube : https://bit.ly/3c0WJz9
 └────
+
 Berapapun donasi kalian akan sangat berarti 👍
 
 Arigatou!
 
 Contact person Owner:
-wa.me/6181351047727 (Owner)`
-let message = await prepareWAMessageMedia({ image: {url: 'https://telegra.ph/file/ca517a39ce85c8a4c0479.jpg' }}, { upload: conn.waUploadToServer })
+wa.me/6281946945315 (Owner)`
+let message = await prepareWAMessageMedia({ image: {url: 'https://telegra.ph/file/b44da6d309f6df1fda2c4.jpg' }}, { upload: conn.waUploadToServer })
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
          hydratedTemplate: {
@@ -28,20 +30,20 @@ let message = await prepareWAMessageMedia({ image: {url: 'https://telegra.ph/fil
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '🏧 Saweria',
-               url: 'https://saweria.co/ilmanhdyt'
+               displayText: 'Youtube ',
+               url: 'https://bit.ly/3c0WJz9'
              }
 
            },
                {
-             callButton: {
-               displayText: 'Telkomsel',
-               phoneNumber: '+62 813-5104-7727'
+             urlButton: {
+               displayText: 'Group Botz',
+               url: 'https://bit.ly/3ax9GjJ'
              }
            },           
                {
              quickReplyButton: {
-               displayText: '🧒 Owner',
+               displayText: '😎 Owner',
                id: '.owner',
              }
 
