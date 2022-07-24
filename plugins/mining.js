@@ -36,7 +36,7 @@ let handler = async (m, { conn, usedPrefix, DevMode }) => {
             let uang = `${Math.floor(Math.random() * 20)}`.trim() 
             conn.reply(m.chat, '↓Mining:', m)
             let str = `
-❤️ While mining you found:
+⛏️Saat Menambang Anda Menemukan :
 🔮Stone: ${batu}
 🔩Iron: ${iron}
 💵Gold: ${uang}
@@ -50,7 +50,7 @@ let handler = async (m, { conn, usedPrefix, DevMode }) => {
             global.db.data.users[m.sender].money += uang * 1
             global.db.data.users[m.sender].lastadventure = new Date * 1
             } else conn.reply(m.chat, `Please wait  *${timers}* again`, m)
-        } else conn.reply(m.chat, 'minimum 80 healt to do mining', m)
+        } else conn.reply(m.chat, 'minimal 80 health dek', m)
     } catch (e) {
         console.log(e)
         conn.reply(m.chat, 'Error', m)
