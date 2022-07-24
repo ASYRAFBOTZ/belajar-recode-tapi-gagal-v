@@ -6,12 +6,12 @@ let handler = async (m) => {
     else who = m.sender
     let user = global.db.data.users[who]
 let anu = `╭───❑ 「 BALANCE 」 ❑────
-│ ✇ Name: ${user.name}
-│ ✇ Limit: ${user.limit}
-│ ✇ Money: ${user.money}
-│ ✇ Exp: ${user.exp}
-│ ✇ Level: ${user.level}
-│ ✇ Role: ${user.role}
+│ ✇ 🐦Name: ${user.name}
+│ ✇ 🎫Limit: ${user.limit}
+│ ✇ 💸Money: ${user.money}
+│ ✇ 🌟Exp: ${user.exp}
+│ ✇ 📊Level: ${user.level}
+│ ✇ 📍Role: ${user.role}
 ╰❑`
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
@@ -22,8 +22,8 @@ let anu = `╭───❑ 「 BALANCE 」 ❑────
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '💠 Source Code',
-               url: 'https://github.com/ilmanhdyt/ShiraoriBOT-Md'
+               displayText: 'Youtube',
+               url: 'https://bit.ly/3c0WJz9'
              }
 
            },
