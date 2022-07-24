@@ -63,7 +63,9 @@ module.exports = {
                     if (!isNumber(user.mythic)) user.mythic = 0
                     if (!isNumber(user.legendary)) user.legendary = 0
                     if (!isNumber(user.pet)) user.pet = 0
+                    if (!isNumber(user.anvered)) user.anvered = 0
 
+                    if (!isNumber(user.ratumedusa)) user.ratumedusa = 0
                     if (!isNumber(user.kuda)) user.kuda = 0
                     if (!isNumber(user.kudaexp)) user.kudaexp = 0
                     if (!isNumber(user.kucing)) user.kucing = 0
@@ -133,7 +135,9 @@ module.exports = {
                     mythic: 0,
                     legendary: 0,
                     pet: 0,
+                    anvered: 0,
 
+                    ratumedusa: 0,
                     kuda: 0,
                     kudaexp: 0,
                     kucing: 0,
@@ -179,8 +183,8 @@ module.exports = {
                     if (!('sPromote' in chat)) chat.sPromote = ''
                     if (!('sDemote' in chat)) chat.sDemote = ''
                     if (!('delete' in chat)) chat.delete = true
-                    if (!('antiLink' in chat)) chat.antiLink = false
-                    if (!('simi' in chat)) chat.simi = false
+                    if (!('antiLink' in chat)) chat.antiLink = true
+                    if (!('simi' in chat)) chat.simi = true
                     if (!('viewonce' in chat)) chat.viewonce = false
                     if (!('antiToxic' in chat)) chat.antiToxic = false
                 } else global.db.data.chats[m.chat] = {
@@ -192,8 +196,8 @@ module.exports = {
                     sPromote: '',
                     sDemote: '',
                     delete: true,
-                    antiLink: false,
-                    simi: false,
+                    antiLink: true,
+                    simi: true,
                     viewonce: false,
                     antiToxic: true,
                 }
